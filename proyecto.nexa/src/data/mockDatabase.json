@@ -1,8 +1,8 @@
 {
   "systemMetadata": {
-    "version": "2.4.1-stable",
+    "version": "2.5.0-ui-update",
     "totalNodes": 200,
-    "lastSync": "2026-04-13T14:00:00Z",
+    "lastSync": "2026-05-15T08:00:00Z",
     "globalBaseEvents": 14250100
   },
   "departments": [
@@ -17,26 +17,27 @@
     { "id": "TND", "name": "Trinidad", "nodeCount": 3, "baseEvents": 95000, "center": [-14.8333, -64.9000] },
     { "id": "CBJ", "name": "Cobija", "nodeCount": 2, "baseEvents": 45000, "center": [-11.0333, -68.7333] }
   ],
-  "nodesConfig": [
-    { "id": "NXT-SCZ-001", "region": "Santa Cruz", "type": "Cámara ANPR", "status": "ONLINE", "ip": "10.45.12.88", "lat": -17.7811, "lng": -63.1800, "hardware": "AXIS Q1656-LE", "lastMaintenance": "2026-03-15" },
-    { "id": "NXT-LPZ-045", "region": "La Paz", "type": "Sensor Climático", "status": "ONLINE", "ip": "10.45.18.90", "lat": -16.4950, "lng": -68.1200, "hardware": "Vaisala WXT530", "lastMaintenance": "2026-02-28" },
-    { "id": "NXT-CBB-112", "region": "Cochabamba", "type": "Cámara ANPR", "status": "WARNING", "ip": "10.45.22.14", "lat": -17.3850, "lng": -66.1520, "hardware": "Bosch MIC IP starlight", "lastMaintenance": "2025-11-10" },
-    { "id": "NXT-ORU-007", "region": "Oruro", "type": "Sensor Climático", "status": "ONLINE", "ip": "10.45.44.11", "lat": -17.9600, "lng": -67.1100, "hardware": "Vaisala WXT530", "lastMaintenance": "2026-01-12" },
-    { "id": "NXT-TJA-002", "region": "Tarija", "type": "Cámara ANPR", "status": "ONLINE", "ip": "10.45.88.23", "lat": -21.5300, "lng": -64.7300, "hardware": "AXIS Q1656-LE", "lastMaintenance": "2026-04-01" }
-  ],
   "vehicles": {
+    "MFT-3650": {
+      "owner": "Javier Torres Pinto",
+      "ci": "CI: 5543123 CB",
+      "model": "Ford Explorer 2022",
+      "status": "Activo - Bajo Observación",
+      "fines": 1,
+      "baseRouteRegions": ["Cochabamba", "Cochabamba", "Cochabamba", "Cochabamba", "Cochabamba", "Cochabamba", "Cochabamba", "Cochabamba", "Cochabamba", "Cochabamba"]
+    },
     "BOL-777": {
-      "owner": "Empresa de Logística TransNacional S.A.",
+      "owner": "Logística TransNacional S.A.",
       "ci": "NIT: 1029384029",
       "model": "Volvo FH 2024 (Tractocamión)",
-      "status": "Activo - Ruta Nacional Interdepartamental",
+      "status": "Activo - Ruta Nacional",
       "fines": 0,
       "baseRouteRegions": ["La Paz", "El Alto", "Oruro", "Cochabamba", "Santa Cruz"]
     },
     "CBB-999": {
       "owner": "Carlos Mamani Condori",
       "ci": "CI: 8839210 CB",
-      "model": "Toyota Hilux 2021 (Camioneta 4x4)",
+      "model": "Toyota Hilux 2021",
       "status": "Alerta - Multas Pendientes",
       "fines": 3,
       "baseRouteRegions": ["Cochabamba", "Potosí", "Tarija"]
@@ -44,26 +45,88 @@
     "SCZ-123": {
       "owner": "María Antonieta Fernandez",
       "ci": "CI: 6629103 SC",
-      "model": "Suzuki Corolla 2018 (Sedán)",
-      "status": "Activo - Movimiento Local Intensivo",
+      "model": "Suzuki Corolla 2018",
+      "status": "Activo - Tráfico Urbano",
       "fines": 0,
-      "baseRouteRegions": ["Santa Cruz", "Santa Cruz", "Santa Cruz", "Santa Cruz", "Santa Cruz", "Santa Cruz", "Santa Cruz", "Santa Cruz", "Santa Cruz", "Santa Cruz", "Santa Cruz", "Santa Cruz", "Santa Cruz", "Santa Cruz", "Santa Cruz"]
+      "baseRouteRegions": ["Santa Cruz", "Santa Cruz", "Santa Cruz", "Santa Cruz", "Santa Cruz"]
     },
     "LPZ-404": {
       "owner": "Registro Público",
       "ci": "N/A",
       "model": "Nissan Patrol 2015",
-      "status": "CRÍTICO - Vehículo con Reporte de Robo",
+      "status": "CRÍTICO - Vehículo Robado",
       "fines": 1,
       "baseRouteRegions": ["La Paz", "El Alto", "Oruro"]
     },
     "ORU-555": {
-      "owner": "Sindicato de Transporte Interdepartamental",
+      "owner": "Sindicato Interdepartamental",
       "ci": "NIT: 3344556677",
-      "model": "Mercedes-Benz O 500 (Bus Interprovincial)",
-      "status": "Activo - Monitoreo Continuo",
+      "model": "Mercedes-Benz O 500 (Bus)",
+      "status": "Activo",
       "fines": 0,
       "baseRouteRegions": ["Oruro", "Potosí", "Sucre", "Tarija"]
+    },
+    "TJA-001": {
+      "owner": "Gobernación Departamental",
+      "ci": "NIT: 1000000001",
+      "model": "Lexus LX 600",
+      "status": "Oficial - Vehículo de Estado",
+      "fines": 0,
+      "baseRouteRegions": ["Tarija", "Sucre", "La Paz"]
+    },
+    "PTS-555": {
+      "owner": "Minera San Cristóbal",
+      "ci": "NIT: 9080706050",
+      "model": "Caterpillar 797F",
+      "status": "Permiso Especial",
+      "fines": 0,
+      "baseRouteRegions": ["Potosí", "Oruro"]
+    },
+    "XYZ-123": {
+      "owner": "Juan Pérez",
+      "ci": "CI: 1234567 LP",
+      "model": "Toyota Vitz 2008",
+      "status": "Inactivo",
+      "fines": 5,
+      "baseRouteRegions": ["La Paz", "El Alto"]
+    },
+    "ABC-987": {
+      "owner": "Ana Gómez",
+      "ci": "CI: 7654321 SC",
+      "model": "Hyundai Tucson 2023",
+      "status": "Activo",
+      "fines": 0,
+      "baseRouteRegions": ["Santa Cruz", "Cochabamba"]
     }
-  }
+  },
+  "infractions": [
+    { "id": "INF-001", "date": "18/05/2026", "time": "07:41:40", "location": "Cochabamba", "nodeId": "NXT-COC-136", "plate": "MFT-3650", "speed": 106, "limit": 80, "status": "Pendiente", "hasEvidence": true },
+    { "id": "INF-002", "date": "18/05/2026", "time": "08:15:22", "location": "Cochabamba", "nodeId": "NXT-COC-154", "plate": "MFT-3650", "speed": 95, "limit": 60, "status": "Pendiente", "hasEvidence": true },
+    { "id": "INF-003", "date": "18/05/2026", "time": "14:20:10", "location": "Cochabamba", "nodeId": "NXT-COC-088", "plate": "MFT-3650", "speed": 112, "limit": 80, "status": "Notificado", "hasEvidence": true },
+    { "id": "INF-004", "date": "19/05/2026", "time": "09:05:00", "location": "Cochabamba", "nodeId": "NXT-COC-136", "plate": "MFT-3650", "speed": 101, "limit": 80, "status": "Pagado", "hasEvidence": false },
+    { "id": "INF-005", "date": "20/05/2026", "time": "18:45:30", "location": "Cochabamba", "nodeId": "NXT-COC-042", "plate": "MFT-3650", "speed": 88, "limit": 60, "status": "Pendiente", "hasEvidence": true },
+    
+    { "id": "INF-006", "date": "15/05/2026", "time": "10:10:00", "location": "Cochabamba", "nodeId": "NXT-COC-012", "plate": "CBB-999", "speed": 120, "limit": 80, "status": "Notificado", "hasEvidence": true },
+    { "id": "INF-007", "date": "16/05/2026", "time": "11:22:15", "location": "Potosí", "nodeId": "NXT-PTS-004", "plate": "CBB-999", "speed": 95, "limit": 60, "status": "Notificado", "hasEvidence": true },
+    { "id": "INF-008", "date": "17/05/2026", "time": "08:05:44", "location": "Tarija", "nodeId": "NXT-TJA-009", "plate": "CBB-999", "speed": 105, "limit": 80, "status": "Pendiente", "hasEvidence": false },
+    
+    { "id": "INF-009", "date": "18/05/2026", "time": "02:15:00", "location": "La Paz", "nodeId": "NXT-LPZ-050", "plate": "LPZ-404", "speed": 140, "limit": 80, "status": "Pendiente", "hasEvidence": true },
+    { "id": "INF-010", "date": "18/05/2026", "time": "03:45:12", "location": "Oruro", "nodeId": "NXT-ORU-007", "plate": "LPZ-404", "speed": 155, "limit": 100, "status": "Pendiente", "hasEvidence": true },
+    
+    { "id": "INF-011", "date": "18/05/2026", "time": "07:45:22", "location": "Santa Cruz", "nodeId": "NXT-SCZ-201", "plate": "XAS-1928", "speed": 110, "limit": 80, "status": "Pagado", "hasEvidence": false },
+    { "id": "INF-012", "date": "18/05/2026", "time": "08:12:10", "location": "La Paz", "nodeId": "NXT-LPZ-033", "plate": "LPT-1122", "speed": 85, "limit": 60, "status": "Pagado", "hasEvidence": true },
+    { "id": "INF-013", "date": "19/05/2026", "time": "14:30:00", "location": "Oruro", "nodeId": "NXT-ORU-012", "plate": "ORU-555", "speed": 115, "limit": 100, "status": "Notificado", "hasEvidence": true },
+    { "id": "INF-014", "date": "19/05/2026", "time": "09:05:40", "location": "Santa Cruz", "nodeId": "NXT-SCZ-018", "plate": "SCZ-123", "speed": 92, "limit": 60, "status": "Pendiente", "hasEvidence": true },
+    { "id": "INF-015", "date": "20/05/2026", "time": "16:22:10", "location": "Sucre", "nodeId": "NXT-SUC-005", "plate": "SUC-111", "speed": 75, "limit": 50, "status": "Pagado", "hasEvidence": false },
+    { "id": "INF-016", "date": "20/05/2026", "time": "11:40:55", "location": "Trinidad", "nodeId": "NXT-TND-002", "plate": "TND-222", "speed": 88, "limit": 60, "status": "Pendiente", "hasEvidence": true },
+    { "id": "INF-017", "date": "21/05/2026", "time": "08:15:33", "location": "Cobija", "nodeId": "NXT-CBJ-001", "plate": "CBJ-333", "speed": 72, "limit": 50, "status": "Notificado", "hasEvidence": true },
+    { "id": "INF-018", "date": "21/05/2026", "time": "13:10:00", "location": "Potosí", "nodeId": "NXT-PTS-008", "plate": "PTS-555", "speed": 65, "limit": 40, "status": "Pagado", "hasEvidence": false },
+    { "id": "INF-019", "date": "22/05/2026", "time": "17:45:00", "location": "Santa Cruz", "nodeId": "NXT-SCZ-044", "plate": "BOL-777", "speed": 105, "limit": 80, "status": "Notificado", "hasEvidence": true },
+    { "id": "INF-020", "date": "22/05/2026", "time": "22:15:00", "location": "La Paz", "nodeId": "NXT-LPZ-011", "plate": "XYZ-123", "speed": 95, "limit": 60, "status": "Pendiente", "hasEvidence": true },
+    { "id": "INF-021", "date": "23/05/2026", "time": "06:30:15", "location": "Cochabamba", "nodeId": "NXT-COC-099", "plate": "ABC-987", "speed": 88, "limit": 60, "status": "Pagado", "hasEvidence": false },
+    { "id": "INF-022", "date": "23/05/2026", "time": "12:05:44", "location": "Santa Cruz", "nodeId": "NXT-SCZ-050", "plate": "ABC-987", "speed": 115, "limit": 80, "status": "Pendiente", "hasEvidence": true },
+    { "id": "INF-023", "date": "24/05/2026", "time": "15:22:10", "location": "Tarija", "nodeId": "NXT-TJA-005", "plate": "TJA-001", "speed": 95, "limit": 60, "status": "Notificado", "hasEvidence": true },
+    { "id": "INF-024", "date": "24/05/2026", "time": "19:40:55", "location": "Oruro", "nodeId": "NXT-ORU-010", "plate": "XYZ-123", "speed": 135, "limit": 100, "status": "Pendiente", "hasEvidence": true },
+    { "id": "INF-025", "date": "25/05/2026", "time": "08:15:00", "location": "Sucre", "nodeId": "NXT-SUC-002", "plate": "SUC-111", "speed": 82, "limit": 50, "status": "Pendiente", "hasEvidence": true }
+  ]
 }
