@@ -1,8 +1,8 @@
 # NexaTraffic: National Smart Grid & Traffic Monitoring System
 
 <div align="center">
-  <img width="48%" alt="NexaTraffic System Overview" src="documentation.nexa/assets/img1.png" />
-  <img width="48%" alt="NexaTraffic Architecture Map" src="documentation.nexa/assets/image.png" />
+  <img width="300" height="200" style="object-fit: cover; margin: 4px;" alt="NexaTraffic System Overview" src="documentation.nexa/assets/img1.png" />
+  <img width="300" height="200" style="object-fit: cover; margin: 4px;" alt="NexaTraffic Architecture Map" src="documentation.nexa/assets/image.png" />
 </div>
 
 <div align="center">
