@@ -1,0 +1,69 @@
+{
+  "systemMetadata": {
+    "version": "2.4.1-stable",
+    "totalNodes": 200,
+    "lastSync": "2026-04-13T14:00:00Z",
+    "globalBaseEvents": 14250100
+  },
+  "departments": [
+    { "id": "SCZ", "name": "Santa Cruz", "nodeCount": 55, "baseEvents": 5104200, "center": [-17.7833, -63.1833] },
+    { "id": "LPZ", "name": "La Paz", "nodeCount": 45, "baseEvents": 4802500, "center": [-16.5000, -68.1500] },
+    { "id": "EAL", "name": "El Alto", "nodeCount": 20, "baseEvents": 2100000, "center": [-16.5000, -68.1500] },
+    { "id": "CBB", "name": "Cochabamba", "nodeCount": 35, "baseEvents": 3105300, "center": [-17.3833, -66.1500] },
+    { "id": "ORU", "name": "Oruro", "nodeCount": 12, "baseEvents": 450100, "center": [-17.9667, -67.1167] },
+    { "id": "PTS", "name": "Potosí", "nodeCount": 10, "baseEvents": 320000, "center": [-19.5833, -65.7500] },
+    { "id": "TJA", "name": "Tarija", "nodeCount": 10, "baseEvents": 280000, "center": [-21.5333, -64.7333] },
+    { "id": "SUC", "name": "Sucre", "nodeCount": 8, "baseEvents": 188000, "center": [-19.0333, -65.2627] },
+    { "id": "TND", "name": "Trinidad", "nodeCount": 3, "baseEvents": 95000, "center": [-14.8333, -64.9000] },
+    { "id": "CBJ", "name": "Cobija", "nodeCount": 2, "baseEvents": 45000, "center": [-11.0333, -68.7333] }
+  ],
+  "nodesConfig": [
+    { "id": "NXT-SCZ-001", "region": "Santa Cruz", "type": "Cámara ANPR", "status": "ONLINE", "ip": "10.45.12.88", "lat": -17.7811, "lng": -63.1800, "hardware": "AXIS Q1656-LE", "lastMaintenance": "2026-03-15" },
+    { "id": "NXT-LPZ-045", "region": "La Paz", "type": "Sensor Climático", "status": "ONLINE", "ip": "10.45.18.90", "lat": -16.4950, "lng": -68.1200, "hardware": "Vaisala WXT530", "lastMaintenance": "2026-02-28" },
+    { "id": "NXT-CBB-112", "region": "Cochabamba", "type": "Cámara ANPR", "status": "WARNING", "ip": "10.45.22.14", "lat": -17.3850, "lng": -66.1520, "hardware": "Bosch MIC IP starlight", "lastMaintenance": "2025-11-10" },
+    { "id": "NXT-ORU-007", "region": "Oruro", "type": "Sensor Climático", "status": "ONLINE", "ip": "10.45.44.11", "lat": -17.9600, "lng": -67.1100, "hardware": "Vaisala WXT530", "lastMaintenance": "2026-01-12" },
+    { "id": "NXT-TJA-002", "region": "Tarija", "type": "Cámara ANPR", "status": "ONLINE", "ip": "10.45.88.23", "lat": -21.5300, "lng": -64.7300, "hardware": "AXIS Q1656-LE", "lastMaintenance": "2026-04-01" }
+  ],
+  "vehicles": {
+    "BOL-777": {
+      "owner": "Empresa de Logística TransNacional S.A.",
+      "ci": "NIT: 1029384029",
+      "model": "Volvo FH 2024 (Tractocamión)",
+      "status": "Activo - Ruta Nacional Interdepartamental",
+      "fines": 0,
+      "baseRouteRegions": ["La Paz", "El Alto", "Oruro", "Cochabamba", "Santa Cruz"]
+    },
+    "CBB-999": {
+      "owner": "Carlos Mamani Condori",
+      "ci": "CI: 8839210 CB",
+      "model": "Toyota Hilux 2021 (Camioneta 4x4)",
+      "status": "Alerta - Multas Pendientes",
+      "fines": 3,
+      "baseRouteRegions": ["Cochabamba", "Potosí", "Tarija"]
+    },
+    "SCZ-123": {
+      "owner": "María Antonieta Fernandez",
+      "ci": "CI: 6629103 SC",
+      "model": "Suzuki Corolla 2018 (Sedán)",
+      "status": "Activo - Movimiento Local Intensivo",
+      "fines": 0,
+      "baseRouteRegions": ["Santa Cruz", "Santa Cruz", "Santa Cruz", "Santa Cruz", "Santa Cruz", "Santa Cruz", "Santa Cruz", "Santa Cruz", "Santa Cruz", "Santa Cruz", "Santa Cruz", "Santa Cruz", "Santa Cruz", "Santa Cruz", "Santa Cruz"]
+    },
+    "LPZ-404": {
+      "owner": "Registro Público",
+      "ci": "N/A",
+      "model": "Nissan Patrol 2015",
+      "status": "CRÍTICO - Vehículo con Reporte de Robo",
+      "fines": 1,
+      "baseRouteRegions": ["La Paz", "El Alto", "Oruro"]
+    },
+    "ORU-555": {
+      "owner": "Sindicato de Transporte Interdepartamental",
+      "ci": "NIT: 3344556677",
+      "model": "Mercedes-Benz O 500 (Bus Interprovincial)",
+      "status": "Activo - Monitoreo Continuo",
+      "fines": 0,
+      "baseRouteRegions": ["Oruro", "Potosí", "Sucre", "Tarija"]
+    }
+  }
+}

@@ -1,0 +1,29 @@
+/* Asegurar que el contenedor raíz ocupe toda la pantalla */
+#root {
+  width: 100vw;
+  height: 100vh;
+}
+
+/* * OVERRIDES PARA REACT-LEAFLET 
+ * Esto quita el fondo blanco por defecto de los tooltips 
+ * y los hace lucir como interfaces holográficas limpias.
+ */
+.custom-hover-tooltip { 
+  background-color: transparent !important; 
+  border: none !important; 
+  box-shadow: none !important; 
+}
+
+/* Eliminar la "flecha" blanca que traen los tooltips por defecto */
+.leaflet-tooltip-top:before, 
+.leaflet-tooltip-bottom:before, 
+.leaflet-tooltip-left:before, 
+.leaflet-tooltip-right:before { 
+  display: none !important; 
+}
+
+/* Fondo de prevención del mapa mientras cargan los tiles oscuros */
+.leaflet-container {
+  background: #09090b !important;
+  font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
+}

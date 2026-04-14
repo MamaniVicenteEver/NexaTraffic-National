@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NexaTraffic - Presentación Arquitectónica</title>
+    
+    <!-- Reveal.js Core CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reveal.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/theme/black.min.css" id="theme">
+    
+    <!-- Tailwind CSS (Para estilado rápido de tarjetas y layouts) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        zinc: { 900: '#18181b', 950: '#09090b' },
+                        indigo: { 500: '#6366f1', 600: '#4f46e5' },
+                        rose: { 500: '#f43f5e' }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Tipografía Moderna Importada */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono:wght@400;700&display=swap');
+
+        /* Sobrescribir estilos de Reveal.js para que luzca corporativo */
+        .reveal {
+            font-family: 'Inter', sans-serif !important;
+            color: #d4d4d8 !important; /* zinc-300 */
+        }
+        .reveal h1, .reveal h2, .reveal h3, .reveal h4 {
+            font-family: 'Inter', sans-serif !important;
+            text-transform: none !important;
+            font-weight: 800 !important;
+            letter-spacing: -0.02em !important;
+            color: #f4f4f5 !important;
+        }
+        .reveal h1 { font-size: 3.5em !important; }
+        .reveal h2 { font-size: 2.2em !important; color: #818cf8 !important; /* indigo-400 */ }
+        
+        /* Efecto Neón para palabras clave */
+        .glow-text {
+            color: #6366f1;
+            text-shadow: 0 0 20px rgba(99,102,241,0.5);
+        }
+
+        /* Canvas de fondo estático, la presentación va sobre él */
+        #network-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: -1;
+            background-color: #09090b; /* zinc-950 */
+        }
+
+        /* Cajas de contenido tipo cristal */
+        .glass-box {
+            background: rgba(24, 24, 27, 0.7); /* zinc-900 translúcido */
+            border: 1px solid rgba(99, 102, 241, 0.2);
+            backdrop-filter: blur(10px);
+            border-radius: 1rem;
+            padding: 2rem;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Iframe para Demo en vivo */
+        .live-demo-iframe {
+            width: 100%;
+            height: 600px;
+            border: 1px solid #27272a;
+            border-radius: 12px;
+            background: #000;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Animación de Fondo: Nodos de Arquitectura / IoT -->
+    <canvas id="network-canvas"></canvas>
+
+    <div class="reveal">
+        <div class="slides">
+            
+            <!-- DIAPOSITIVA 1: PORTADA -->
+            <section>
+                <div class="flex flex-col items-center justify-center h-full">
+                    <div class="w-20 h-20 bg-indigo-500/10 border border-indigo-500/30 flex items-center justify-center rounded-2xl shadow-[0_0_30px_rgba(99,102,241,0.3)] mb-6">
+                        <!-- Icono SVG Hexagon -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="rgba(99,102,241,0.2)" stroke="#6366f1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path></svg>
+                    </div>
+                    <h1>NexaTraffic <span class="glow-text">Core</span></h1>
+                    <p class="text-xl text-zinc-400 tracking-widest uppercase font-semibold mt-4">Sistema de Monitoreo de Tráfico Nacional</p>
+                    <p class="text-sm font-mono text-zinc-500 mt-12">Proyecto Capstone - Arquitectura 4</p>
+                </div>
+            </section>
+
+            <!-- DIAPOSITIVA 2: ÍNDICE (AGENDA) -->
+            <section>
+                <h2>Agenda del Proyecto</h2>
+                <div class="glass-box text-left max-w-3xl mx-auto mt-8">
+                    <ul class="text-lg space-y-4 font-mono">
+                        <li class="flex items-center gap-4 fragment fade-up">
+                            <span class="text-indigo-500 font-bold">01.</span> El Desafío a Escala (4M Eventos)
+                        </li>
+                        <li class="flex items-center gap-4 fragment fade-up">
+                            <span class="text-indigo-500 font-bold">02.</span> Diseño Guiado por Dominio (DDD)
+                        </li>
+                        <li class="flex items-center gap-4 fragment fade-up">
+                            <span class="text-indigo-500 font-bold">03.</span> Arquitectura Cloud-Native & Kafka
+                        </li>
+                        <li class="flex items-center gap-4 fragment fade-up">
+                            <span class="text-indigo-500 font-bold">04.</span> Patrones de Resiliencia y Observabilidad
+                        </li>
+                        <li class="flex items-center gap-4 fragment fade-up">
+                            <span class="text-rose-500 font-bold">05.</span> Demostración en Vivo (NOC Dashboard)
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- DIAPOSITIVA 3: EL PROBLEMA -->
+            <section>
+                <section>
+                    <h2>01. El Desafío a Escala</h2>
+                    <p class="text-zinc-400 mt-4">Procesar el comportamiento físico de una nación entera en tiempo real.</p>
+                </section>
+                <section>
+                    <div class="grid grid-cols-3 gap-6">
+                        <div class="glass-box text-center">
+                            <div class="text-4xl font-bold text-indigo-400 mb-2">200+</div>
+                            <div class="text-sm uppercase tracking-wider text-zinc-500">Nodos IoT Remotos</div>
+                        </div>
+                        <div class="glass-box text-center">
+                            <div class="text-4xl font-bold text-rose-400 mb-2">4,000,000</div>
+                            <div class="text-sm uppercase tracking-wider text-zinc-500">Eventos Diarios</div>
+                        </div>
+                        <div class="glass-box text-center">
+                            <div class="text-4xl font-bold text-emerald-400 mb-2">&lt; 50ms</div>
+                            <div class="text-sm uppercase tracking-wider text-zinc-500">Latencia Tolerable</div>
+                        </div>
+                    </div>
+                    <p class="text-left mt-8 text-lg">
+                        <strong>Problema:</strong> Un monolito tradicional colapsaría ante los picos de tráfico vehicular y la alta volatilidad de los datos climáticos.
+                    </p>
+                </section>
+            </section>
+
+            <!-- DIAPOSITIVA 4: ARQUITECTURA -->
+            <section>
+                <h2>03. Topología Event-Driven</h2>
+                <div class="glass-box mt-6">
+                    <p class="text-sm text-zinc-400 mb-6">Desacoplamiento total usando Apache Kafka como columna vertebral.</p>
+                    
+                    <!-- Aquí reemplazarías esto con tu imagen real del diagrama C4 exportado -->
+                    <div class="w-full h-64 border border-dashed border-zinc-700 flex items-center justify-center text-zinc-600 font-mono text-sm rounded">
+                        [Imagen: Insertar Arquitectura_C4_Level2.png aquí]
+                    </div>
+                    
+                    <div class="grid grid-cols-2 gap-4 text-left mt-6 text-sm font-mono text-zinc-300">
+                        <div><span class="text-indigo-400">»</span> Ingesta Asíncrona</div>
+                        <div><span class="text-indigo-400">»</span> Persistencia Políglota (TSDB, Grafo)</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- DIAPOSITIVA 5: DEMO EN VIVO (AQUÍ OCURRE LA MAGIA) -->
+            <section data-state="live-demo">
+                <h2 class="text-rose-500 flex justify-center items-center gap-3">
+                    <span class="w-3 h-3 bg-rose-500 rounded-full animate-pulse"></span> 
+                    Demostración en Vivo
+                </h2>
+                <p class="text-sm text-zinc-400 mb-4 font-mono">Conectando al Centro de Operaciones de Red (Localhost:5173)...</p>
+                
+                <!-- IFRAME APUNTANDO A TU PROYECTO REACT -->
+                <!-- Nota: Debes tener ejecutando 'npm run dev' en la terminal de proyecto.nexa para que esto funcione -->
+                <iframe class="live-demo-iframe" src="http://localhost:5173" frameborder="0" allowfullscreen></iframe>
+            </section>
+
+            <!-- DIAPOSITIVA 6: CONCLUSIONES -->
+            <section>
+                <h2>Reflexión y DevOps</h2>
+                <div class="glass-box text-left">
+                    <h3 class="text-indigo-400 text-xl mb-4">Pipeline CI/CD</h3>
+                    <p class="text-sm text-zinc-400 mb-6">Implementación conceptual vía GitHub Actions asegurando integración continua.</p>
+                    
+                    <h3 class="text-indigo-400 text-xl mb-4">Impacto de la Inteligencia Artificial</h3>
+                    <p class="text-sm text-zinc-300">
+                        La IA generativa se utilizó críticamente para validar patrones de diseño, 
+                        estructurar la asincronía de los Web Workers y generar la matemática de la simulación 
+                        (Distribución de Poisson) para este prototipo.
+                    </p>
+                </div>
+            </section>
+
+            <!-- DIAPOSITIVA FINAL -->
+            <section>
+                <div class="w-20 h-20 mx-auto bg-indigo-500/10 border border-indigo-500/30 flex items-center justify-center rounded-2xl mb-6">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="rgba(99,102,241,0.2)" stroke="#6366f1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path></svg>
+                </div>
+                <h2>Gracias</h2>
+                <p class="font-mono text-zinc-500 mt-4">¿Preguntas sobre la arquitectura?</p>
+            </section>
+
+        </div>
+    </div>
+
+    <!-- Reveal.js Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reveal.min.js"></script>
+    
+    <script>
+        // Inicializar la presentación Reveal.js
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            center: true,
+            hash: true,
+            transition: 'slide', // 'none', 'fade', 'slide', 'convex', 'concave', 'zoom'
+            backgroundTransition: 'fade',
+        });
+
+        // ==========================================
+        // SCRIPT DEL FONDO ANIMADO EN CANVAS (NODOS IoT)
+        // ==========================================
+        const canvas = document.getElementById('network-canvas');
+        const ctx = canvas.getContext('2d');
+        let width, height;
+        let particles = [];
+
+        function resize() {
+            width = canvas.width = window.innerWidth;
+            height = canvas.height = window.innerHeight;
+        }
+        window.addEventListener('resize', resize);
+        resize();
+
+        class Particle {
+            constructor() {
+                this.x = Math.random() * width;
+                this.y = Math.random() * height;
+                this.vx = (Math.random() - 0.5) * 0.5;
+                this.vy = (Math.random() - 0.5) * 0.5;
+                this.radius = Math.random() * 2 + 1;
+            }
+            update() {
+                this.x += this.vx;
+                this.y += this.vy;
+                if (this.x < 0 || this.x > width) this.vx = -this.vx;
+                if (this.y < 0 || this.y > height) this.vy = -this.vy;
+            }
+            draw() {
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+                ctx.fillStyle = 'rgba(99, 102, 241, 0.5)'; // Indigo color
+                ctx.fill();
+            }
+        }
+
+        // Crear partículas
+        for (let i = 0; i < 80; i++) {
+            particles.push(new Particle());
+        }
+
+        function animate() {
+            ctx.clearRect(0, 0, width, height);
+            
+            for (let i = 0; i < particles.length; i++) {
+                particles[i].update();
+                particles[i].draw();
+                
+                // Conectar partículas cercanas con líneas
+                for (let j = i + 1; j < particles.length; j++) {
+                    const dx = particles[i].x - particles[j].x;
+                    const dy = particles[i].y - particles[j].y;
+                    const dist = Math.sqrt(dx * dx + dy * dy);
+                    
+                    if (dist < 150) {
+                        ctx.beginPath();
+                        ctx.moveTo(particles[i].x, particles[i].y);
+                        ctx.lineTo(particles[j].x, particles[j].y);
+                        ctx.strokeStyle = `rgba(99, 102, 241, ${1 - dist/150})`;
+                        ctx.lineWidth = 0.5;
+                        ctx.stroke();
+                    }
+                }
+            }
+            requestAnimationFrame(animate);
+        }
+        animate();
+    </script>
+</body>
+</html>
