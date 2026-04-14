@@ -1,8 +1,8 @@
 # NexaTraffic: National Smart Grid & Traffic Monitoring System
 
 <div align="center">
-  <img width="48%" alt="NexaTraffic System Overview" src="./img/img1.png" />
-  <img width="48%" alt="NexaTraffic Architecture Map" src="./img/image.png" />
+  <img width="48%" alt="NexaTraffic System Overview" src="documentation.nexa/assets/img1.png" />
+  <img width="48%" alt="NexaTraffic Architecture Map" src="documentation.nexa/assets/image.png" />
 </div>
 
 <div align="center">
@@ -14,68 +14,74 @@
   <img src="https://img.shields.io/badge/Design-DDD-6DB33F" alt="DDD" />
 </div>
 
-## Vision General
+## Visión General
 
-NexaTraffic es una plataforma de monitoreo de trafico nacional de alto rendimiento diseñada para la gestion inteligente de movilidad urbana. El sistema integra telemetria de 200 ubicaciones remotas, procesando un promedio de 4 millones de eventos vehiculares diarios mediante una arquitectura distribuida basada en eventos (Event-Driven Architecture).
+NexaTraffic es una plataforma de monitoreo de tráfico nacional de alto rendimiento diseñada para la gestión inteligente de movilidad urbana. El sistema integra telemetría de 200 ubicaciones remotas, procesando un promedio de 4 millones de eventos vehiculares diarios mediante una arquitectura distribuida basada en eventos (Event-Driven Architecture).
 
-La solucion garantiza escalabilidad elastica, tolerancia a fallos y procesamiento en tiempo real para la deteccion de infracciones, seguimiento de trayectorias y analisis climatico.
+La solución garantiza escalabilidad elástica, tolerancia a fallos y procesamiento en tiempo real para la detección de infracciones, seguimiento de trayectorias y análisis climático.
 
-## Documentacion de Arquitectura
+## Documentación de Arquitectura
 
-Seleccione una seccion para explorar los detalles tecnicos del sistema.
+Seleccione una sección para explorar los detalles técnicos del sistema.
 
-### 00 Informatica General (Home)
-- [Vision General](00_Home/01_Vision_General.md) – Contexto estrategico y propositos.
-- [Alcance Detallado](00_Home/02_Alcance_Detallado.md) – Funcionalidades, limites y supuestos.
-- [Glosario Tecnico](00_Home/03_Glosario_Tecnico.md) – Definiciones de dominio y terminologia.
+### 01 Contexto y Requisitos
+- [Visión General](documentation.nexa/01_Contexto_Y_Requisitos/01_Vision_General.md) – Contexto estratégico y propósitos.
+- [Alcance Detallado](documentation.nexa/01_Contexto_Y_Requisitos/02_Alcance_Detallado.md) – Funcionalidades, límites y supuestos.
+- [Glosario Técnico](documentation.nexa/01_Contexto_Y_Requisitos/03_Glosario_Tecnico.md) – Definiciones de dominio y terminología.
+- [Propuesta Inicial y Brechas](documentation.nexa/01_Contexto_Y_Requisitos/04_Propuesta_Inicial.md) – Análisis de incertidumbres y mitigaciones.
 
-### 01 Analisis de Dominio (DDD)
-- [Event Storming](01_Analisis_DDD/01_Event_Storming.md) – Linea de tiempo de eventos de negocio.
-- [Subdominios y Bounded Contexts](01_Analisis_DDD/02_Subdominios_Bounded_Contexts.md) – Descomposicion del sistema.
-- [Context Map](01_Analisis_DDD/03_Context_Map.md) – Relaciones y protocolos entre contextos.
-- [Casos de Uso Criticos](01_Analisis_DDD/04_Casos_de_Uso.md) – Flujos principales de usuario y sistema.
-- [Analisis de Brechas](01_Analisis_DDD/05_Analisis_Brechas.md) – Resolucion de ambiguedades tecnicas.
+### 02 Análisis de Dominio (DDD)
+- [Event Storming](documentation.nexa/02_Analisis_Dominio_DDD/01_Event_Storming.md) – Línea de tiempo de eventos de negocio.
+- [Bounded Contexts](documentation.nexa/02_Analisis_Dominio_DDD/02_Bounded_Contexts.md) – Descomposición del sistema en contextos delimitados.
+- [Context Map](documentation.nexa/02_Analisis_Dominio_DDD/03_Context_Map.md) – Relaciones y protocolos entre contextos.
+- [Modelo de Dominio](documentation.nexa/02_Analisis_Dominio_DDD/04_Domain_Model.md) – Entidades, agregados, value objects y eventos.
+- [Casos de Uso de Dominio](documentation.nexa/02_Analisis_Dominio_DDD/05_Domain_Use_Cases.md) – Flujos críticos con JSON canónicos.
 
-### 02 Diseño Arquitectonico
-- [Seleccion de Estilo](02_Arquitectura_Sistema/01_Seleccion_Estilo.md) – Justificacion de Microservicios y EDA.
-- [C4 Nivel 1: Contexto](02_Arquitectura_Sistema/02_Vista_C4_L1_Contexto.md) – Interacciones externas.
-- [C4 Nivel 2: Contenedores](02_Arquitectura_Sistema/03_Vista_C4_L2_Contenedores.md) – Infraestructura distribuida.
-- [C4 Nivel 3: Componentes](02_Arquitectura_Sistema/04_Vista_C4_L3_Componentes.md) – Logica interna de servicios.
-- [Diagramas de Comunicacion](02_Arquitectura_Sistema/05_Diagramas_Comunicacion.md) – Flujos asincronos en Kafka.
-- [Modelo de Datos Distribuido](02_Arquitectura_Sistema/06_Modelo_Datos_Distribuido.md) – Persistencia poliglota.
+### 03 Diseño Arquitectónico
+- [Justificación Cloud-Native](documentation.nexa/03_Diseño_Arquitectonico/01_Justificacion_Estilo_Cloud_Native.md) – Microservicios vs monolito, EDA, 12 factores.
+- [C4 Nivel 1: Contexto](documentation.nexa/03_Diseño_Arquitectonico/02_Vista_C4_L1_Contexto.md) – Interacciones externas (PlantUML).
+- [C4 Nivel 2: Contenedores](documentation.nexa/03_Diseño_Arquitectonico/03_Vista_C4_L2_Contenedores.md) – Infraestructura distribuida (PlantUML).
+- [C4 Nivel 3: Componentes](documentation.nexa/03_Diseño_Arquitectonico/04_Vista_C4_L3_Componentes.md) – Lógica interna de servicios (PlantUML).
+- [Diagramas de Secuencia Kafka](documentation.nexa/03_Diseño_Arquitectonico/05_Diagramas_Secuencia_Kafka_Flows.md) – Flujos asíncronos.
+- [Persistencia Políglota](documentation.nexa/03_Diseño_Arquitectonico/06_Estrategia_Persistencia_Poliglota.md) – Estrategia de almacenamiento.
+- [Resiliencia y Back-pressure](documentation.nexa/03_Diseño_Arquitectonico/07_Estrategia_Resiliencia_Backpressure.md) – Tolerancia a fallos y control de flujo.
 
-### 03 Estrategia Tecnologica
-- [Seleccion de Tecnología](03_Decisiones_Tecnologicas/01_Seleccion_Tecnologia.md) – Justificacion del Stack.
-- [Estrategia de Escalabilidad](03_Decisiones_Tecnologicas/02_Estrategia_Escalabilidad.md) – Gestion de picos de carga.
-- [Analisis de Trade-offs](03_Decisiones_Tecnologicas/03_Trade_offs_Analisis.md) – Decisiones criticas de diseño.
+### 04 Decisiones Tecnológicas
+- [Stack Tecnológico](documentation.nexa/04_Decisiones_Tecnologicas/01_Stack_Tecnologico_Propuesto.md) – Lenguajes, frameworks, infraestructura y costos.
+- [Escalabilidad Elástica](documentation.nexa/04_Decisiones_Tecnologicas/02_Estrategia_Escalabilidad_Elastic.md) – Políticas de autoescalado y KEDA.
+- [Trade-offs y Disponibilidad](documentation.nexa/04_Decisiones_Tecnologicas/03_Analisis_Trade_offs_Disponibilidad.md) – Análisis CAP, HA, degradación controlada.
 
-### 05 Gestion y Planificacion
-- [Gestion de Riesgos](05_Gestion_Proyecto/01_Gestion_Riesgos.md) – Mitigacion de fallos criticos.
-- [Plan de Implementacion](05_Gestion_Proyecto/02_Plan_Implementacion.md) – Cronograma y fases.
+### 05 Gestión y Operación
+- [Matriz de Riesgos](documentation.nexa/05_Gestion_Y_Operacion/01_Matriz_de_Riesgos_Arquitectonicos.md) – Identificación y mitigación de riesgos.
+- [Cronograma de Implementación](documentation.nexa/05_Gestion_Y_Operacion/02_Cronograma_Implementacion_Fases.md) – 7 semanas + demo.
+- [Validación POC](documentation.nexa/05_Gestion_Y_Operacion/03_Validacion_POC_Ingesta_Masiva.md) – Pruebas de carga simuladas.
+- [CI/CD y Reflexión IA](documentation.nexa/05_Gestion_Y_Operacion/04_CI_CD_y_Reflexion_IA.md) – Pipeline GitHub Actions y uso de inteligencia artificial.
+
+### Conclusiones Finales
+- [Conclusiones y Reflexión](documentation.nexa/07_Conclusiones.md) – Resumen, trade-offs asumidos, limitaciones y lecciones aprendidas.
 
 ---
 
 ## Atributos de Calidad Principales
 
-| Atributo | Metrica Objetivo | Estrategia |
+| Atributo | Métrica Objetivo | Estrategia |
 |----------|------------------|------------|
 | **Rendimiento** | Latencia < 200ms | Procesamiento en memoria con Redis y Go. |
-| **Escalabilidad** | 15,400+ Usuarios | Orquestacion con Kubernetes y Auto-scaling. |
-| **Disponibilidad** | 99.99% | Arquitectura multi-region y aislamiento de fallos. |
-| **Retencion** | 5 Años | Particionamiento de datos en ClickHouse. |
+| **Escalabilidad** | 15,400+ Usuarios | Orquestación con Kubernetes y Auto-scaling. |
+| **Disponibilidad** | 99.99% | Arquitectura multi-región y aislamiento de fallos. |
+| **Retención** | 5 Años | Particionamiento de datos en ClickHouse. |
 
-## Stack Tecnologico
+## Stack Tecnológico
 
-- **Backend:** Java Spring Boot (Servicios transaccionales) y Go (Ingesta de alto rendimiento).
+- **Backend:** Java Spring Boot (servicios transaccionales) y Go (ingesta de alto rendimiento).
 - **Messaging:** Apache Kafka (Event Streaming backbone).
-- **Persistencia:** PostgreSQL (Datos relacionales), ClickHouse (Analitica masiva), Redis (Cache).
+- **Persistencia:** PostgreSQL (datos relacionales), ClickHouse (analítica masiva), Redis (caché).
 - **Infraestructura:** Docker, Kubernetes, Helm.
-- **Analitica:** Python (Modelado de datos de trafico).
+- **Analítica:** Python (modelado de datos de tráfico).
 
 ---
 
 **Autor:** Ever Mamani Vicente  
 **Proyecto:** Capstone - Arquitectura de Software 4  
-**Institucion:** Universidad Jala  
-**Fecha:** Marzo 2026# NexaTraffic-National
-# NexaTraffic-National
+**Institución:** Universidad Jala  
+**Fecha:** Abril 2026
