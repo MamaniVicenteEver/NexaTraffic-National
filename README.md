@@ -20,6 +20,17 @@ NexaTraffic es una plataforma de monitoreo de tráfico nacional de alto rendimie
 
 La solución garantiza escalabilidad elástica, tolerancia a fallos y procesamiento en tiempo real para la detección de infracciones, seguimiento de trayectorias y análisis climático.
 
+## Vista Preliminar del Dashboard (Mockup)
+
+A continuación se muestran dos capturas del dashboard administrativo en desarrollo. La primera presenta una visión general del sistema con indicadores clave y mapa de calor; la segunda ilustra la sección de monitoreo de infracciones en tiempo real.
+
+<div align="center">
+  <img width="48%" alt="Vista general del dashboard" src="https://github.com/user-attachments/assets/00c71a61-948c-4dc9-8e20-0de4a1cdefef" />
+  <img width="48%" alt="Sección de infracciones" src="https://github.com/user-attachments/assets/8abeea1d-b57b-40e9-93bd-28b35cba15c0" />
+</div>
+
+*Estas imágenes son representativas del estado actual del prototipo y se irán refinando durante la implementación final.*
+
 ## Documentación de Arquitectura
 
 Seleccione una sección para explorar los detalles técnicos del sistema.
@@ -69,7 +80,6 @@ Seleccione una sección para explorar los detalles técnicos del sistema.
 | **Rendimiento** | Latencia < 200ms | Procesamiento en memoria con Redis y Go. |
 | **Escalabilidad** | 15,400+ Usuarios | Orquestación con Kubernetes y Auto-scaling. |
 | **Disponibilidad** | 99.99% | Arquitectura multi-región y aislamiento de fallos. |
-| **Retención** | 5 Años | Particionamiento de datos en ClickHouse. |
 
 ## Stack Tecnológico
 
