@@ -5,9 +5,7 @@
   <img style="width: 45%; aspect-ratio: 4/3; object-fit: cover;" alt="NexaTraffic Architecture Map" src="documentation.nexa/assets/img2.png" />
 </div>
 
-
 <div align="center">
-
   <img src="https://img.shields.io/badge/Architecture-Cloud--Native-0055FF" alt="Cloud Native" />
   <img src="https://img.shields.io/badge/Backbone-Apache_Kafka-EB1C24" alt="Kafka" />
   <img src="https://img.shields.io/badge/Language-Go_%7C_Java-00ADD8" alt="Languages" />
@@ -16,90 +14,84 @@
   <img src="https://img.shields.io/badge/Design-DDD-6DB33F" alt="DDD" />
 </div>
 
-## Visión General
+## Overview
 
-NexaTraffic es una plataforma de monitoreo de tráfico nacional de alto rendimiento diseñada para la gestión inteligente de movilidad urbana. El sistema integra telemetría de 200 ubicaciones remotas, procesando un promedio de 4 millones de eventos vehiculares diarios mediante una arquitectura distribuida basada en eventos (Event-Driven Architecture).
+NexaTraffic is a high‑performance national traffic monitoring platform designed for intelligent urban mobility management. The system integrates telemetry from 200 remote locations, processing an average of 4 million daily vehicle events through a distributed event‑driven architecture.
 
-La solución garantiza escalabilidad elástica, tolerancia a fallos y procesamiento en tiempo real para la detección de infracciones, seguimiento de trayectorias y análisis climático.
+The solution guarantees elastic scalability, fault tolerance, and real‑time processing for violation detection, trajectory tracking, and weather analysis.
 
-## Vista Preliminar del Dashboard (Mockup)
+## Dashboard Preview (Mockup)
 
-A continuación se muestran dos capturas del dashboard administrativo en desarrollo. La primera presenta una visión general del sistema con indicadores clave y mapa de calor; la segunda ilustra la sección de monitoreo de infracciones en tiempo real.
+Below are two screenshots of the administrative dashboard under development. The first shows a system overview with key indicators and a heat map; the second illustrates the real‑time violation monitoring section.
 
 <div align="center">
-  <img width="100%" alt="Vista general del dashboard" src="https://github.com/user-attachments/assets/00c71a61-948c-4dc9-8e20-0de4a1cdefef" />
-  <img width="100%" alt="Sección de infracciones" src="https://github.com/user-attachments/assets/8abeea1d-b57b-40e9-93bd-28b35cba15c0" />
+  <img width="100%" alt="Dashboard overview" src="https://github.com/user-attachments/assets/00c71a61-948c-4dc9-8e20-0de4a1cdefef" />
+  <img width="100%" alt="Violations section" src="https://github.com/user-attachments/assets/8abeea1d-b57b-40e9-93bd-28b35cba15c0" />
 </div>
 
-_Estas imágenes son representativas del estado actual del prototipo y se irán refinando durante la implementación final._
+*These images are representative of the current prototype and will be refined during the final implementation.*
 
-## Documentación de Arquitectura
+## Architecture Documentation
 
-Seleccione una sección para explorar los detalles técnicos del sistema.
+Select a section to explore the technical details of the system.
 
-### 01 Contexto y Requisitos
+### 01 Context and Requirements
+- [Vision Overview](documentation.nexa/01_Contexto_Y_Requisitos/01_Vision_General.md) – Strategic context and objectives.
+- [Detailed Scope](documentation.nexa/01_Contexto_Y_Requisitos/02_Alcance_Detallado.md) – Features, boundaries, and assumptions.
+- [Technical Glossary](documentation.nexa/01_Contexto_Y_Requisitos/03_Glosario_Tecnico.md) – Domain definitions and terminology.
+- [Initial Proposal and Gaps](documentation.nexa/01_Contexto_Y_Requisitos/04_Propuesta_Inicial.md) – Uncertainty analysis and mitigations.
 
-- [Visión General](documentation.nexa/01_Contexto_Y_Requisitos/01_Vision_General.md) – Contexto estratégico y propósitos.
-- [Alcance Detallado](documentation.nexa/01_Contexto_Y_Requisitos/02_Alcance_Detallado.md) – Funcionalidades, límites y supuestos.
-- [Glosario Técnico](documentation.nexa/01_Contexto_Y_Requisitos/03_Glosario_Tecnico.md) – Definiciones de dominio y terminología.
-- [Propuesta Inicial y Brechas](documentation.nexa/01_Contexto_Y_Requisitos/04_Propuesta_Inicial.md) – Análisis de incertidumbres y mitigaciones.
+### 02 Domain Analysis (DDD)
+- [Event Storming](documentation.nexa/02_Analisis_Dominio_DDD/01_Event_Storming.md) – Business event timeline.
+- [Bounded Contexts](documentation.nexa/02_Analisis_Dominio_DDD/02_Bounded_Contexts.md) – System decomposition into bounded contexts.
+- [Context Map](documentation.nexa/02_Analisis_Dominio_DDD/03_Context_Map.md) – Relationships and protocols between contexts.
+- [Domain Model](documentation.nexa/02_Analisis_Dominio_DDD/04_Domain_Model.md) – Entities, aggregates, value objects, and events.
+- [Domain Use Cases](documentation.nexa/02_Analisis_Dominio_DDD/05_Domain_Use_Cases.md) – Critical flows with canonical JSON.
 
-### 02 Análisis de Dominio (DDD)
+### 03 Architectural Design
+- [Cloud‑Native Justification](documentation.nexa/03_Diseño_Arquitectonico/01_Justificacion_Estilo_Cloud_Native.md) – Microservices vs. monolith, EDA, 12‑factor.
+- [C4 Level 1: Context](documentation.nexa/03_Diseño_Arquitectonico/02_Vista_C4_L1_Contexto.md) – External interactions (PlantUML).
+- [C4 Level 2: Containers](documentation.nexa/03_Diseño_Arquitectonico/03_Vista_C4_L2_Contenedores.md) – Distributed infrastructure (PlantUML).
+- [C4 Level 3: Components](documentation.nexa/03_Diseño_Arquitectonico/04_Vista_C4_L3_Componentes.md) – Internal service logic (PlantUML).
+- [Kafka Sequence Diagrams](documentation.nexa/03_Diseño_Arquitectonico/05_Diagramas_Secuencia_Kafka_Flows.md) – Asynchronous flows.
+- [Polyglot Persistence](documentation.nexa/03_Diseño_Arquitectonico/06_Estrategia_Persistencia_Poliglota.md) – Storage strategy.
+- [Resilience & Back‑pressure](documentation.nexa/03_Diseño_Arquitectonico/07_Estrategia_Resiliencia_Backpressure.md) – Fault tolerance and flow control.
 
-- [Event Storming](documentation.nexa/02_Analisis_Dominio_DDD/01_Event_Storming.md) – Línea de tiempo de eventos de negocio.
-- [Bounded Contexts](documentation.nexa/02_Analisis_Dominio_DDD/02_Bounded_Contexts.md) – Descomposición del sistema en contextos delimitados.
-- [Context Map](documentation.nexa/02_Analisis_Dominio_DDD/03_Context_Map.md) – Relaciones y protocolos entre contextos.
-- [Modelo de Dominio](documentation.nexa/02_Analisis_Dominio_DDD/04_Domain_Model.md) – Entidades, agregados, value objects y eventos.
-- [Casos de Uso de Dominio](documentation.nexa/02_Analisis_Dominio_DDD/05_Domain_Use_Cases.md) – Flujos críticos con JSON canónicos.
+### 04 Technology Decisions
+- [Proposed Tech Stack](documentation.nexa/04_Decisiones_Tecnologicas/01_Stack_Tecnologico_Propuesto.md) – Languages, frameworks, infrastructure, and costs.
+- [Elastic Scalability](documentation.nexa/04_Decisiones_Tecnologicas/02_Estrategia_Escalabilidad_Elastic.md) – Autoscaling policies and KEDA.
+- [Trade‑offs & Availability](documentation.nexa/04_Decisiones_Tecnologicas/03_Analisis_Trade_offs_Disponibilidad.md) – CAP analysis, HA, graceful degradation.
 
-### 03 Diseño Arquitectónico
+### 05 Management & Operations
+- [Risk Matrix](documentation.nexa/05_Gestion_Y_Operacion/01_Matriz_de_Riesgos_Arquitectonicos.md) – Risk identification and mitigation.
+- [Implementation Timeline](documentation.nexa/05_Gestion_Y_Operacion/02_Cronograma_Implementacion_Fases.md) – 7 weeks + demo.
+- [POC Validation](documentation.nexa/05_Gestion_Y_Operacion/03_Validacion_POC_Ingesta_Masiva.md) – Simulated load tests.
+- [CI/CD & AI Reflection](documentation.nexa/05_Gestion_Y_Operacion/04_CI_CD_y_Reflexion_IA.md) – GitHub Actions pipeline and AI usage.
 
-- [Justificación Cloud-Native](documentation.nexa/03_Diseño_Arquitectonico/01_Justificacion_Estilo_Cloud_Native.md) – Microservicios vs monolito, EDA, 12 factores.
-- [C4 Nivel 1: Contexto](documentation.nexa/03_Diseño_Arquitectonico/02_Vista_C4_L1_Contexto.md) – Interacciones externas (PlantUML).
-- [C4 Nivel 2: Contenedores](documentation.nexa/03_Diseño_Arquitectonico/03_Vista_C4_L2_Contenedores.md) – Infraestructura distribuida (PlantUML).
-- [C4 Nivel 3: Componentes](documentation.nexa/03_Diseño_Arquitectonico/04_Vista_C4_L3_Componentes.md) – Lógica interna de servicios (PlantUML).
-- [Diagramas de Secuencia Kafka](documentation.nexa/03_Diseño_Arquitectonico/05_Diagramas_Secuencia_Kafka_Flows.md) – Flujos asíncronos.
-- [Persistencia Políglota](documentation.nexa/03_Diseño_Arquitectonico/06_Estrategia_Persistencia_Poliglota.md) – Estrategia de almacenamiento.
-- [Resiliencia y Back-pressure](documentation.nexa/03_Diseño_Arquitectonico/07_Estrategia_Resiliencia_Backpressure.md) – Tolerancia a fallos y control de flujo.
-
-### 04 Decisiones Tecnológicas
-
-- [Stack Tecnológico](documentation.nexa/04_Decisiones_Tecnologicas/01_Stack_Tecnologico_Propuesto.md) – Lenguajes, frameworks, infraestructura y costos.
-- [Escalabilidad Elástica](documentation.nexa/04_Decisiones_Tecnologicas/02_Estrategia_Escalabilidad_Elastic.md) – Políticas de autoescalado y KEDA.
-- [Trade-offs y Disponibilidad](documentation.nexa/04_Decisiones_Tecnologicas/03_Analisis_Trade_offs_Disponibilidad.md) – Análisis CAP, HA, degradación controlada.
-
-### 05 Gestión y Operación
-
-- [Matriz de Riesgos](documentation.nexa/05_Gestion_Y_Operacion/01_Matriz_de_Riesgos_Arquitectonicos.md) – Identificación y mitigación de riesgos.
-- [Cronograma de Implementación](documentation.nexa/05_Gestion_Y_Operacion/02_Cronograma_Implementacion_Fases.md) – 7 semanas + demo.
-- [Validación POC](documentation.nexa/05_Gestion_Y_Operacion/03_Validacion_POC_Ingesta_Masiva.md) – Pruebas de carga simuladas.
-- [CI/CD y Reflexión IA](documentation.nexa/05_Gestion_Y_Operacion/04_CI_CD_y_Reflexion_IA.md) – Pipeline GitHub Actions y uso de inteligencia artificial.
-
-### Conclusiones Finales
-
-- [Conclusiones y Reflexión](documentation.nexa/07_Conclusiones.md) – Resumen, trade-offs asumidos, limitaciones y lecciones aprendidas.
+### Final Conclusions
+- [Conclusions & Reflection](documentation.nexa/07_Conclusiones.md) – Summary, trade‑offs, limitations, and lessons learned.
 
 ---
 
-## Atributos de Calidad Principales
+## Key Quality Attributes
 
-| Atributo           | Métrica Objetivo | Estrategia                                         |
-| ------------------ | ---------------- | -------------------------------------------------- |
-| **Rendimiento**    | Latencia < 200ms | Procesamiento en memoria con Redis y Go.           |
-| **Escalabilidad**  | 15,400+ Usuarios | Orquestación con Kubernetes y Auto-scaling.        |
-| **Disponibilidad** | 99.99%           | Arquitectura multi-región y aislamiento de fallos. |
+| Attribute         | Target Metric       | Strategy                                               |
+| ----------------- | ------------------- | ------------------------------------------------------ |
+| **Performance**   | Latency < 200ms     | In‑memory processing with Redis and Go.                |
+| **Scalability**   | 15,400+ Users       | Kubernetes orchestration and auto‑scaling.             |
+| **Availability**  | 99.99%              | Multi‑region architecture and fault isolation.         |
 
-## Stack Tecnológico
+## Technology Stack
 
-- **Backend:** Java Spring Boot (servicios transaccionales) y Go (ingesta de alto rendimiento).
-- **Messaging:** Apache Kafka (Event Streaming backbone).
-- **Persistencia:** PostgreSQL (datos relacionales), ClickHouse (analítica masiva), Redis (caché).
-- **Infraestructura:** Docker, Kubernetes, Helm.
-- **Analítica:** Python (modelado de datos de tráfico).
+- **Backend:** Java Spring Boot (transactional services) and Go (high‑throughput ingestion).
+- **Messaging:** Apache Kafka (event streaming backbone).
+- **Persistence:** PostgreSQL (relational data), ClickHouse (massive analytics), Redis (cache).
+- **Infrastructure:** Docker, Kubernetes, Helm.
+- **Analytics:** Python (traffic data modeling).
 
 ---
 
-**Autor:** Ever Mamani Vicente  
-**Proyecto:** Capstone - Arquitectura de Software 4  
-**Institución:** Universidad Jala  
-**Fecha:** Abril 2026
+**Author:** Ever Mamani Vicente  
+**Project:** Capstone - Software Architecture 4  
+**Institution:** Universidad Jala  
+**Date:** April 2026
