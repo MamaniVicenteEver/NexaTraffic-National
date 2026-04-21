@@ -36,40 +36,40 @@ Below are two screenshots of the administrative dashboard under development. The
 Select a section to explore the technical details of the system.
 
 ### 01 Context and Requirements
-- [Vision Overview](documentation.nexa/01_Contexto_Y_Requisitos/01_Vision_General.md) – Strategic context and objectives.
-- [Detailed Scope](documentation.nexa/01_Contexto_Y_Requisitos/02_Alcance_Detallado.md) – Features, boundaries, and assumptions.
-- [Technical Glossary](documentation.nexa/01_Contexto_Y_Requisitos/03_Glosario_Tecnico.md) – Domain definitions and terminology.
-- [Initial Proposal and Gaps](documentation.nexa/01_Contexto_Y_Requisitos/04_Propuesta_Inicial.md) – Uncertainty analysis and mitigations.
+- [Vision Overview](https://github.com/MamaniVicenteEver/NexaTraffic-National/blob/main/documentation.nexa/en/01_Contexto_Y_Requisitos/01_Vision_General.md) – Strategic context and objectives.
+- [Detailed Scope](https://github.com/MamaniVicenteEver/NexaTraffic-National/blob/main/documentation.nexa/en/01_Contexto_Y_Requisitos/02_Alcance_Detallado.md) – Features, boundaries, and assumptions.
+- [Technical Glossary](https://github.com/MamaniVicenteEver/NexaTraffic-National/blob/main/documentation.nexa/en/01_Contexto_Y_Requisitos/03_Glosario_Tecnico.md) – Domain definitions and terminology.
+- [Initial Proposal and Gaps](https://github.com/MamaniVicenteEver/NexaTraffic-National/blob/main/documentation.nexa/en/01_Contexto_Y_Requisitos/04_Propuesta_Inicial.md) – Uncertainty analysis and mitigations.
 
 ### 02 Domain Analysis (DDD)
-- [Event Storming](documentation.nexa/02_Analisis_Dominio_DDD/01_Event_Storming.md) – Business event timeline.
-- [Bounded Contexts](documentation.nexa/02_Analisis_Dominio_DDD/02_Bounded_Contexts.md) – System decomposition into bounded contexts.
-- [Context Map](documentation.nexa/02_Analisis_Dominio_DDD/03_Context_Map.md) – Relationships and protocols between contexts.
-- [Domain Model](documentation.nexa/02_Analisis_Dominio_DDD/04_Domain_Model.md) – Entities, aggregates, value objects, and events.
-- [Domain Use Cases](documentation.nexa/02_Analisis_Dominio_DDD/05_Domain_Use_Cases.md) – Critical flows with canonical JSON.
+- [Event Storming](https://github.com/MamaniVicenteEver/NexaTraffic-National/blob/main/documentation.nexa/en/02_Analisis_Dominio_DDD/01_Event_Storming.md) – Business event timeline.
+- [Bounded Contexts](https://github.com/MamaniVicenteEver/NexaTraffic-National/blob/main/documentation.nexa/en/02_Analisis_Dominio_DDD/02_Bounded_Contexts.md) – System decomposition into bounded contexts.
+- [Context Map](https://github.com/MamaniVicenteEver/NexaTraffic-National/blob/main/documentation.nexa/en/02_Analisis_Dominio_DDD/03_Context_Map.md) – Relationships and protocols between contexts.
+- [Domain Model](https://github.com/MamaniVicenteEver/NexaTraffic-National/blob/main/documentation.nexa/en/02_Analisis_Dominio_DDD/04_Domain_Model.md) – Entities, aggregates, value objects, and events.
+- [Domain Use Cases](https://github.com/MamaniVicenteEver/NexaTraffic-National/blob/main/documentation.nexa/en/02_Analisis_Dominio_DDD/05_Domain_Use_Cases.md) – Critical flows with canonical JSON.
 
 ### 03 Architectural Design
-- [Cloud‑Native Justification](documentation.nexa/03_Diseño_Arquitectonico/01_Justificacion_Estilo_Cloud_Native.md) – Microservices vs. monolith, EDA, 12‑factor.
-- [C4 Level 1: Context](documentation.nexa/03_Diseño_Arquitectonico/02_Vista_C4_L1_Contexto.md) – External interactions (PlantUML).
-- [C4 Level 2: Containers](documentation.nexa/03_Diseño_Arquitectonico/03_Vista_C4_L2_Contenedores.md) – Distributed infrastructure (PlantUML).
-- [C4 Level 3: Components](documentation.nexa/03_Diseño_Arquitectonico/04_Vista_C4_L3_Componentes.md) – Internal service logic (PlantUML).
-- [Kafka Sequence Diagrams](documentation.nexa/03_Diseño_Arquitectonico/05_Diagramas_Secuencia_Kafka_Flows.md) – Asynchronous flows.
-- [Polyglot Persistence](documentation.nexa/03_Diseño_Arquitectonico/06_Estrategia_Persistencia_Poliglota.md) – Storage strategy.
-- [Resilience & Back‑pressure](documentation.nexa/03_Diseño_Arquitectonico/07_Estrategia_Resiliencia_Backpressure.md) – Fault tolerance and flow control.
+- [Cloud‑Native Justification](https://github.com/MamaniVicenteEver/NexaTraffic-National/blob/main/documentation.nexa/en/03_Diseño_Arquitectonico/01_Justificacion_Estilo_Cloud_Native.md) – Microservices vs. monolith, EDA, 12‑factor.
+- [C4 Level 1: Context](https://github.com/MamaniVicenteEver/NexaTraffic-National/blob/main/documentation.nexa/en/03_Diseño_Arquitectonico/02_Vista_C4_L1_Contexto.md) – External interactions (PlantUML).
+- [C4 Level 2: Containers](https://github.com/MamaniVicenteEver/NexaTraffic-National/blob/main/documentation.nexa/en/03_Diseño_Arquitectonico/03_Vista_C4_L2_Contenedores.md) – Distributed infrastructure (PlantUML).
+- [C4 Level 3: Components](https://github.com/MamaniVicenteEver/NexaTraffic-National/blob/main/documentation.nexa/en/03_Diseño_Arquitectonico/04_Vista_C4_L3_Componentes.md) – Internal service logic (PlantUML).
+- [Kafka Sequence Diagrams](https://github.com/MamaniVicenteEver/NexaTraffic-National/blob/main/documentation.nexa/en/03_Diseño_Arquitectonico/05_Diagramas_Secuencia_Kafka_Flows.md) – Asynchronous flows.
+- [Polyglot Persistence](https://github.com/MamaniVicenteEver/NexaTraffic-National/blob/main/documentation.nexa/en/03_Diseño_Arquitectonico/06_Estrategia_Persistencia_Poliglota.md) – Storage strategy.
+- [Resilience & Back‑pressure](https://github.com/MamaniVicenteEver/NexaTraffic-National/blob/main/documentation.nexa/en/03_Diseño_Arquitectonico/07_Estrategia_Resiliencia_Backpressure.md) – Fault tolerance and flow control.
 
 ### 04 Technology Decisions
-- [Proposed Tech Stack](documentation.nexa/04_Decisiones_Tecnologicas/01_Stack_Tecnologico_Propuesto.md) – Languages, frameworks, infrastructure, and costs.
-- [Elastic Scalability](documentation.nexa/04_Decisiones_Tecnologicas/02_Estrategia_Escalabilidad_Elastic.md) – Autoscaling policies and KEDA.
-- [Trade‑offs & Availability](documentation.nexa/04_Decisiones_Tecnologicas/03_Analisis_Trade_offs_Disponibilidad.md) – CAP analysis, HA, graceful degradation.
+- [Proposed Tech Stack](https://github.com/MamaniVicenteEver/NexaTraffic-National/blob/main/documentation.nexa/en/04_Decisiones_Tecnologicas/01_Stack_Tecnologico_Propuesto.md) – Languages, frameworks, infrastructure, and costs.
+- [Elastic Scalability](https://github.com/MamaniVicenteEver/NexaTraffic-National/blob/main/documentation.nexa/en/04_Decisiones_Tecnologicas/02_Estrategia_Escalabilidad_Elastic.md) – Autoscaling policies and KEDA.
+- [Trade‑offs & Availability](https://github.com/MamaniVicenteEver/NexaTraffic-National/blob/main/documentation.nexa/en/04_Decisiones_Tecnologicas/03_Analisis_Trade_offs_Disponibilidad.md) – CAP analysis, HA, graceful degradation.
 
 ### 05 Management & Operations
-- [Risk Matrix](documentation.nexa/05_Gestion_Y_Operacion/01_Matriz_de_Riesgos_Arquitectonicos.md) – Risk identification and mitigation.
-- [Implementation Timeline](documentation.nexa/05_Gestion_Y_Operacion/02_Cronograma_Implementacion_Fases.md) – 7 weeks + demo.
-- [POC Validation](documentation.nexa/05_Gestion_Y_Operacion/03_Validacion_POC_Ingesta_Masiva.md) – Simulated load tests.
-- [CI/CD & AI Reflection](documentation.nexa/05_Gestion_Y_Operacion/04_CI_CD_y_Reflexion_IA.md) – GitHub Actions pipeline and AI usage.
+- [Risk Matrix](https://github.com/MamaniVicenteEver/NexaTraffic-National/blob/main/documentation.nexa/en/05_Gestion_Y_Operacion/01_Matriz_de_Riesgos_Arquitectonicos.md) – Risk identification and mitigation.
+- [Implementation Timeline](https://github.com/MamaniVicenteEver/NexaTraffic-National/blob/main/documentation.nexa/en/05_Gestion_Y_Operacion/02_Cronograma_Implementacion_Fases.md) – 7 weeks + demo.
+- [POC Validation](https://github.com/MamaniVicenteEver/NexaTraffic-National/blob/main/documentation.nexa/en/05_Gestion_Y_Operacion/03_Validacion_POC_Ingesta_Masiva.md) – Simulated load tests.
+- [CI/CD & AI Reflection](https://github.com/MamaniVicenteEver/NexaTraffic-National/blob/main/documentation.nexa/en/05_Gestion_Y_Operacion/04_CI_CD_y_Reflexion_IA.md) – GitHub Actions pipeline and AI usage.
 
 ### Final Conclusions
-- [Conclusions & Reflection](documentation.nexa/07_Conclusiones.md) – Summary, trade‑offs, limitations, and lessons learned.
+- [Conclusions & Reflection](https://github.com/MamaniVicenteEver/NexaTraffic-National/blob/main/documentation.nexa/en/07_Conclusiones.md) – Summary, trade‑offs, limitations, and lessons learned.
 
 ---
 
